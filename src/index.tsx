@@ -10,7 +10,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
-    <p>始めました</p>
   </React.StrictMode>
 );
 
