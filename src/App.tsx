@@ -1,32 +1,25 @@
-import React from 'react';
+import React from "react";
 
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Header } from "./props/Heder";
 
-import { Home } from './props/pages/Home';
-import { Log } from './props/pages/Log';
+import "./style.css";
 
+import { Home } from "./props/pages/Home";
+import { Log } from "./props/pages/Log";
 
 function App() {
   return (
-      <BrowserRouter>
-        <div className='App'>
-          <Link to="/">Home</Link>
-          <br/>
-          <Link to="/log">Log</Link>
-        </div>
-      
+    <BrowserRouter>
+      <div className="App">
+        <Header />
 
         <Routes>
-        <Route path="/" element={<Home/>}/>
-          
+          <Route path="/" element={<Home />} />
+          <Route path="/log" element={<Log />} />
         </Routes>
-
-        <Routes>
-          <Route path="/log" element={<Log/>}/>
- 
-        </Routes>
-      </BrowserRouter>
-   
+      </div>
+    </BrowserRouter>
   );
 }
 
