@@ -1,10 +1,17 @@
-import { memo, VFC } from "react";
+import { FC, memo, useState, VFC } from "react";
 import { Button, Table } from "react-bootstrap";
+import { LogDetailModal } from "./LogDetailModal";
 
-export const Log: VFC = memo(() => {
+export const Log = memo(() => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <h4>過去の記録</h4>
+      <button onClick={handleShow}>Modal</button>
       <Table striped>
         <thead>
           <tr>
@@ -34,6 +41,7 @@ export const Log: VFC = memo(() => {
           </tr>
         </tbody>
       </Table>
+      <LogDetailModal show={show} onHide={handleClose} />
     </>
   );
 });
