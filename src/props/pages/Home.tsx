@@ -54,21 +54,33 @@ export const Home = memo(() => {
             label="ToDo"
             className="mb-3"
           >
-            <Form.Control as="textarea" placeholder="Leave a comment here" />
+            <Form.Control
+              as="textarea"
+              placeholder="Leave a comment here"
+              style={{ height: "300px" }}
+            />
           </FloatingLabel>
           <FloatingLabel
             controlId="floatingTextarea"
             label="今日の作業"
             className="mb-3"
           >
-            <Form.Control as="textarea" placeholder="Leave a comment here" />
+            <Form.Control
+              as="textarea"
+              placeholder="Leave a comment here"
+              style={{ height: "300px" }}
+            />
           </FloatingLabel>
           <FloatingLabel
             controlId="floatingTextarea"
             label="コメント"
             className="mb-3"
           >
-            <Form.Control as="textarea" placeholder="Leave a comment here" />
+            <Form.Control
+              as="textarea"
+              placeholder="Leave a comment here"
+              style={{ height: "300px" }}
+            />
           </FloatingLabel>
         </div>
         <Button className="sendButton">送信</Button>
