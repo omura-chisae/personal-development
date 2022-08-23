@@ -4,7 +4,7 @@ import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 // type Weather ={}
 
-export const useWeather = () => {
+const useWeather = () => {
   const [loading, setLoading] = useState(false);
   const [weathers, setWeathers] = useState();
 

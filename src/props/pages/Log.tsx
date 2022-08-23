@@ -29,22 +29,23 @@ export const Log = memo(() => {
         <tbody>
           <tr>
             <td>
-              <button onClick={onClickLow}>ai</button>
+              <button onClick={onClickLow}>Modal</button>
             </td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>8/15</td>
+            <td>晴れ</td>
+            <td>テスト</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>8/16</td>
+            <td>晴れ</td>
+            <td>テスト</td>
           </tr>
           <tr>
             <td>3</td>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
+            <td>8/17</td>
+            <td>晴れ</td>
+            <td>テスト</td>
           </tr>
         </tbody>
       </Table>
