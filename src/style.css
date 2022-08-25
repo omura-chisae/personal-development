@@ -86,6 +86,17 @@ FloatingLabel Form.Control {
   align-items: right;
 }
 
+.card-body {
+  margin: 0%;
+  height: 100%;
+}
+.container {
+  margin: 0%;
+}
+.todoContainer {
+  margin: 0%;
+}
+
 /* Logスタイル */
 .todoContainer {
   border-color: black;

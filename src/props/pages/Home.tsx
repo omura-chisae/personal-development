@@ -78,7 +78,7 @@ export const Home = memo(() => {
 
         <div className="textBoxs">
           <IncompleteTodo todos={incompleteTodos} />
-          <Card style={{ height: "100%", width: "100%" }}>
+          <Card style={{ width: "100%" }}>
             <CardHeader>今日の作業</CardHeader>
             <Card.Body></Card.Body>
           </Card>
