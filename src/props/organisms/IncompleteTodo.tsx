@@ -15,21 +15,20 @@ export const IncompleteTodo: FC<Props> = memo((props) => {
       <CardHeader>ToDo</CardHeader>
       <Card.Body style={{ padding: "10px" }}>
         <Container>
-          <Row
-            className="todoContainer"
-            // style={{
-            //   backgroundColor: "#F7ECDE",
-            // }}
-          >
-            {todos.map((todo: any, index: any) => {
+          <Row className="todoContainer">
+            {/* <div className="list-row">
+              <Col>{todos}</Col>
+              <Button>完了</Button>
+            </div> */}
+
+            {todos.map((post: any) => {
               return (
-                <div key={todo} className="list-row">
-                  <Col>{todo}</Col>
+                <div key={post.postTime} className="list-row">
+                  <Col>{post.text}</Col>
                   <Button>完了</Button>
                 </div>
               );
             })}
-
             {/* onClick={onClickComplete} */}
           </Row>
         </Container>

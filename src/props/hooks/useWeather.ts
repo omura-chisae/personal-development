@@ -1,18 +1,18 @@
 import axios from "axios";
-import { useState } from "react";
-import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 // type Weather ={}
 
-const useWeather = () => {
-  const [loading, setLoading] = useState(false);
-  const [weathers, setWeathers] = useState();
+export const useWeather = () => {
+  var weather: string = "";
 
-  const getWeather = () => {
-    console.log("天気取得");
-    axios
-      .get("https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json")
-      .then((res) => console.log(res));
-  };
-  return getWeather;
+  axios
+    .get("https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json")
+    .then((res) => {
+      // console.log(res.data[0].timeSeries[0].areas[0].area.name);
+      // console.log(res.data[0].timeSeries[0].areas[0].weathers[1]);
+      weather = res.data[0].timeSeries[0].areas[0].weathers[0];
+    }) //アクセス成功
+    .catch((err) => console.log(err)); //エラー
+  console.log(weather);
+  return weather;
 };
