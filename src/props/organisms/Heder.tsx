@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <header>
-      <h3>アプリ名</h3>
+      <h3>園芸日記</h3>
 
       <nav>
         <ul>

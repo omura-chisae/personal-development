@@ -3,33 +3,29 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 
 type Props = {
-  // onClickComplete: () => void;
   todos: any;
+  completeButton: () => void;
 };
 
 export const IncompleteTodo: FC<Props> = memo((props) => {
-  const { todos } = props;
+  const { todos, completeButton } = props;
 
   return (
-    <Card style={{ height: "100%", width: "100%" }}>
+    <Card style={{ width: "100%" }}>
       <CardHeader>ToDo</CardHeader>
-      <Card.Body style={{ padding: "10px" }}>
+      <Card.Body style={{ minHeight: "240px", padding: "10px" }}>
         <Container>
           <Row className="todoContainer">
-            {/* <div className="list-row">
-              <Col>{todos}</Col>
-              <Button>完了</Button>
-            </div> */}
-
             {todos.map((post: any) => {
-              return (
-                <div key={post.postTime} className="list-row">
+              return post.isShow ? (
+                <div key={post.id} className="list-row">
                   <Col>{post.text}</Col>
-                  <Button>完了</Button>
+                  <Button onClick={completeButton} id={post.id}>
+                    完了
+                  </Button>
                 </div>
-              );
+              ) : null;
             })}
-            {/* onClick={onClickComplete} */}
           </Row>
         </Container>
       </Card.Body>

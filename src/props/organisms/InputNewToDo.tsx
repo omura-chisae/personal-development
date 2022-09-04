@@ -9,7 +9,7 @@ type Props = {
 
 export const InputNewToDo: FC<Props> = memo((props) => {
   const { todoText, onChangeTodoText, onClickTodoAdd } = props;
-  console.log("レンダリング");
+  // console.log("レンダリング");
 
   return (
     <>

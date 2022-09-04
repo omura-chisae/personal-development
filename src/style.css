@@ -108,3 +108,7 @@ FloatingLabel Form.Control {
   background-color: #f7ecde;
   padding: 5px;
 }
+
+td {
+  height: 80px;
+}

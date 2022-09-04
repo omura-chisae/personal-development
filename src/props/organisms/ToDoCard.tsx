@@ -8,7 +8,6 @@ type Props = {
 
 export const ToDoCard: FC<Props> = memo((props) => {
   const { todo, completeButton } = props;
-  console.log("レンダリング");
 
   return (
     <>
